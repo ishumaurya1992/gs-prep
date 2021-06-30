@@ -22,20 +22,39 @@ import java.util.Map;
 public class DistanceBetweenStrings {
 
     public static void main(String[] args) {
-        String str= "geeks for geeks contribute practice";
-        String w1 = "geeks";
-        String w2 = "practice";
+        String str= "In publishing and graphic design, lorem ipsum is a filler text commonly used to demonstrate the graphic elements.";
+        String w1 = "is";
+        String w2 = "a";
         System.out.println(shortestDistance(str,w1,w2));
     }
 
-    private static int shortestDistance(String str, String w1, String w2) {
+    private static double shortestDistance(String str, String w1, String w2) {
 
         String [] strarr = str.split(" ");
 
+            double first = 0;
+            double second = 0;
+            double cuurSum = 0;
+            int i=0;
+            double minValue = Integer.MAX_VALUE;
+            while(i<strarr.length){
+                if(w1.equals(strarr[i])){
+                    first = cuurSum+ (strarr[i].length()/2.0);
+                }else if(w2.equals(strarr[i])){
+                    second = cuurSum+ (strarr[i].length()/2.0);
+                }
+
+                if(first>0 && second>0){
+                    minValue = Math.min(second-first,minValue);
+                }
+
+                cuurSum+=strarr[i].length()+1;
+                i++;
+            }
 
 
-        return 0;
 
+            return minValue;
     }
 
 }
