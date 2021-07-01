@@ -9,12 +9,13 @@ Return an array containing prime numbers whose product is x
 Examples:
 primeFactorization( 6 ) == [2,3]
 primeFactorization( 5 ) == [5]
-                primeFactorization( 12 ) == [2,2,3]
+primeFactorization( 12 ) == [2,2,3]
 Signature:
-             public static ArrayList<Integer> primeFactorization(int x) {
-              }
+public static ArrayList<Integer> primeFactorization(int x) {
+}
 Test Cases- Input: 6
-Output:[2,3] */
+Output:[2,3] 
+*/
 public class PrimeFactorization {
 
 
