@@ -50,5 +50,27 @@ public class RunLengthEncoding {
 
         return sb.toString();
     }
+    
+     private static String rle2(String word) {
+        //aaaab
+        char pre  = word.charAt(0);
+        int count  = 1;
+        StringBuilder sb =new StringBuilder();
+        for (int i = 1; i < word.length(); i++) {
+            if(word.charAt(i)==pre){
+                count++;
+                pre  = word.charAt(i);
+            }else{
+                sb.append(pre);
+                sb.append(count);
+                pre = word.charAt(i);
+                count = 1;
+            }
+        }
+
+        sb.append(pre);
+        sb.append(count);
+        return sb.toString();
+    }
 
 }
