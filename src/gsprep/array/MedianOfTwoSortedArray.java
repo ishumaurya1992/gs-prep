@@ -1,5 +1,23 @@
 package gsprep.array;
+/*
+Problem Statement:
 
+Find the median of the two sorted arrays
+
+Signature:
+public static double findMedianSortedArrays(int[] A, int[] B) {
+}
+ Test Cases:
+Input:
+Arr1= [1,3];
+Arr2 = [2,4];
+Output:
+2.5
+Input:
+Arr1 = [1,3]
+Arr2= [2]
+Output:2.0
+   */
 public class MedianOfTwoSortedArray {
 
     public double findMedianSortedArrays(int input1[], int input2[]) {
